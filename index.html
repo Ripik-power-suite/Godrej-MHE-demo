@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ripik.ai</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.7/xlsx.core.min.js"></script>   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.core.min.js"></script>
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" style="float: left; padding: 10px 20px; font-size: 25px;">
+      Godrej MHE equipment analysis
+    </a>
+    <a class="active" style="float: right; padding: 15px 20px; font-size: 20px; color: rgb(77, 172, 219);">
+      <img class="logo" src="RipikLogoTransparent.png">Ripik.ai
+    </a>
+  </div>
+
+  <div class="choose-option">
+    <form id="scenario" oninput="showPlots();">
+      <input type="radio" name="xyz" id="scenario1" value=1 checked="true">
+      <label>Drive count analysis</label>
+      <input type="radio" name="xyz" id="scenario2" value=2>
+      <label>Key on hours</label>
+      <input type="radio" name="xyz" id="scenario3" value=3>
+      <label>Equipment Location</label>
+    </form>
+  </div>
+
+  <div class="container" style="width: 95%; justify-content: space-evenly;">
+    <div style="width: 90%;">
+      <div class="card">
+        <h1 style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+          Analytics
+          <form id="showFlier" oninput="showFliers();" style="width:200px; display: flex; float: right; justify-content:right;">
+            <label style="float: right;">Show fliers</label>
+            <label class="switch">
+              <input type="checkbox" id="fliers">
+              <span class="slider"></span>
+            </label>          
+          </form>
+        </h1>
+        <div id="imageRegion1" style="margin: auto;">
+        </div>
+        <div id="imageRegion2" style="margin: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
